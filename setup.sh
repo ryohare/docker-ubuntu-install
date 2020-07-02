@@ -7,8 +7,3 @@ apt-cache policy docker-ce
 sudo apt install docker-ce -y
 sudo apt install docker-compose unzip -y
 sudo usermod -aG docker ${USER}
-git clone https://github.com/samrocketman/docker-compose-ha-consul-vault-ui.git
-cd doc*
-./scripts/consul-agent.sh --bootstrap
-docker-compose up --scale vault=1 -d
-./scripts/initialize-vault.sh
